@@ -93,9 +93,9 @@ def video_info(video_ids):
                         Thumbnail = item['snippet']['thumbnails']['default']['url'],
                         published_date = item['snippet']['publishedAt'],
                         Duration = item['contentDetails']['duration'],
-                        Views = item['statistics']['viewCount'],
+                        Views = item['statistics'].get('viewCount'),
                         Likes = item.get('likeCount'),
-                        Comments = item['statistics']['commentCount'],
+                        Comments = item['statistics'].get('commentCount'),
                         Favorite = item['statistics']['favoriteCount'],
                         Definition = item['contentDetails']['definition'],
                         Captions = item['contentDetails']['caption']
